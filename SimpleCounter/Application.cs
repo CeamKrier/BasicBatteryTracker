@@ -18,8 +18,8 @@ namespace SimpleCounter
         private int elapsedSeconds = 0, elapsedMinutes = 0, elapsedHours = 0;
 
         public Application()
-        {//checkIfCanProgramRun()
-            if (1 == 1)
+        {
+            if (checkIfCanProgramRun())
             {
                 InitializeComponent();
                 this.startingBatteryPercentage = getBatteryPercentage();
