@@ -28,65 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit));
             this.btnEdit = new System.Windows.Forms.Button();
-            this.txtInterval = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pnlControls = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dcEdit = new BatteryTracker.DragControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtInterval = new System.Windows.Forms.TextBox();
+            this.pnlControls.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEdit.Font = new System.Drawing.Font("Bodoni MT Condensed", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(24, 178);
+            this.btnEdit.BackColor = System.Drawing.Color.Bisque;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(3, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(256, 72);
+            this.btnEdit.Size = new System.Drawing.Size(281, 72);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Save";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // txtInterval
-            // 
-            this.txtInterval.Location = new System.Drawing.Point(215, 90);
-            this.txtInterval.Name = "txtInterval";
-            this.txtInterval.Size = new System.Drawing.Size(300, 35);
-            this.txtInterval.TabIndex = 4;
-            // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
-            this.btnCancel.Font = new System.Drawing.Font("Bodoni MT Condensed", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(307, 178);
+            this.btnCancel.BackColor = System.Drawing.Color.Bisque;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(279, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(256, 72);
+            this.btnCancel.Size = new System.Drawing.Size(303, 72);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // label1
+            // pnlControls
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bodoni MT Condensed", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(61, 95);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 27);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Log Interval";
+            this.pnlControls.BackColor = System.Drawing.Color.DarkOrange;
+            this.pnlControls.Controls.Add(this.label2);
+            this.pnlControls.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlControls.Location = new System.Drawing.Point(0, 0);
+            this.pnlControls.Name = "pnlControls";
+            this.pnlControls.Size = new System.Drawing.Size(585, 53);
+            this.pnlControls.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(12, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 30);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Edit";
+            // 
+            // dcEdit
+            // 
+            this.dcEdit.SelectControl = this.pnlControls;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Bisque;
+            this.panel1.Controls.Add(this.btnEdit);
+            this.panel1.Controls.Add(this.btnCancel);
+            this.panel1.Location = new System.Drawing.Point(0, 179);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(585, 74);
+            this.panel1.TabIndex = 10;
+            // 
+            // txtInterval
+            // 
+            this.txtInterval.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtInterval.ForeColor = System.Drawing.Color.Silver;
+            this.txtInterval.Location = new System.Drawing.Point(105, 103);
+            this.txtInterval.Name = "txtInterval";
+            this.txtInterval.Size = new System.Drawing.Size(381, 37);
+            this.txtInterval.TabIndex = 11;
+            this.txtInterval.Text = "Enter interval between 1 to 99";
             // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(585, 265);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtInterval);
-            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlControls);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Edit";
             this.Text = "Edit";
+            this.pnlControls.ResumeLayout(false);
+            this.pnlControls.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,8 +137,11 @@
         #endregion
 
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.TextBox txtInterval;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnlControls;
+        private System.Windows.Forms.Label label2;
+        private BatteryTracker.DragControl dcEdit;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtInterval;
     }
 }
