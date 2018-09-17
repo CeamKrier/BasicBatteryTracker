@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,11 +29,18 @@ namespace SimpleCounter
                 this.batteryLogInterval = 10;
                 this.updateIntervalLabel();
                 lblTime.Text = "Elapsed Time: 0:0:0";
+                SystemEvents.SessionEnding += new SessionEndingEventHandler(SystemEvents_SessionEnding);
             }
             else
             {
                 Environment.Exit(0);
             }
+        }
+
+        private void SystemEvents_SessionEnding(object sender, SessionEndingEventArgs e)
+        {
+            FileIO.writeBatteryLog(this.logCollector);
+            e.Cancel = false;
         }
 
         /*

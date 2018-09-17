@@ -70,7 +70,7 @@
             // 
             // pnlControls
             // 
-            this.pnlControls.BackColor = System.Drawing.Color.DarkOrange;
+            this.pnlControls.BackColor = System.Drawing.Color.Goldenrod;
             this.pnlControls.Controls.Add(this.label2);
             this.pnlControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlControls.Location = new System.Drawing.Point(0, 0);

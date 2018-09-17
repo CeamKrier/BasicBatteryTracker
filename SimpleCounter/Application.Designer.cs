@@ -42,9 +42,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblLogInterval = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.lblLogInterval = new System.Windows.Forms.Label();
+            this.dragControl1 = new BatteryTracker.DragControl();
             this.contextMenuStrip.SuspendLayout();
             this.pnlControls.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -110,7 +111,7 @@
             // 
             // pnlControls
             // 
-            this.pnlControls.BackColor = System.Drawing.Color.DarkOrange;
+            this.pnlControls.BackColor = System.Drawing.Color.Goldenrod;
             this.pnlControls.Controls.Add(this.label1);
             this.pnlControls.Controls.Add(this.btnExit);
             this.pnlControls.Dock = System.Windows.Forms.DockStyle.Top;
@@ -177,6 +178,18 @@
             this.panel2.Size = new System.Drawing.Size(576, 73);
             this.panel2.TabIndex = 6;
             // 
+            // lblLogInterval
+            // 
+            this.lblLogInterval.AutoSize = true;
+            this.lblLogInterval.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblLogInterval.ForeColor = System.Drawing.Color.DarkOrange;
+            this.lblLogInterval.Location = new System.Drawing.Point(106, 21);
+            this.lblLogInterval.Name = "lblLogInterval";
+            this.lblLogInterval.Size = new System.Drawing.Size(77, 40);
+            this.lblLogInterval.TabIndex = 3;
+            this.lblLogInterval.Text = "Text";
+            this.lblLogInterval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -203,17 +216,9 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // lblLogInterval
+            // dragControl1
             // 
-            this.lblLogInterval.AutoSize = true;
-            this.lblLogInterval.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblLogInterval.ForeColor = System.Drawing.Color.DarkOrange;
-            this.lblLogInterval.Location = new System.Drawing.Point(106, 21);
-            this.lblLogInterval.Name = "lblLogInterval";
-            this.lblLogInterval.Size = new System.Drawing.Size(77, 40);
-            this.lblLogInterval.TabIndex = 3;
-            this.lblLogInterval.Text = "Text";
-            this.lblLogInterval.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dragControl1.SelectControl = this.pnlControls;
             // 
             // Application
             // 
@@ -265,6 +270,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblLogInterval;
+        private BatteryTracker.DragControl dragControl1;
     }
 }
 
