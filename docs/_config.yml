@@ -1,6 +1,5 @@
 theme: jekyll-theme-cayman
-title: [Basic Battery Tracker]
-description: [You can download the latest release of the application from there.]
-show_downloads: ["true"]
+title: Basic Battery Tracker
+description: You can download the latest release of the application from there.
 github:
   zip_url: http://example.com/download.zip
