@@ -36,7 +36,10 @@ namespace SimpleCounter
                 Environment.Exit(0);
             }
         }
-
+        /*
+         -If computer shutsdown, user logs off or reboots system
+         -then print the current log to the desktop
+             */
         private void SystemEvents_SessionEnding(object sender, SessionEndingEventArgs e)
         {
             FileIO.writeBatteryLog(this.logCollector);

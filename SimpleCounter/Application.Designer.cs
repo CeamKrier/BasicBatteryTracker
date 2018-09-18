@@ -37,7 +37,7 @@
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tsCloseApp = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlControls = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblProgramName = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -46,6 +46,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.dragControl1 = new BatteryTracker.DragControl();
+            this.dragControl2 = new BatteryTracker.DragControl();
             this.contextMenuStrip.SuspendLayout();
             this.pnlControls.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -112,7 +113,7 @@
             // pnlControls
             // 
             this.pnlControls.BackColor = System.Drawing.Color.Goldenrod;
-            this.pnlControls.Controls.Add(this.label1);
+            this.pnlControls.Controls.Add(this.lblProgramName);
             this.pnlControls.Controls.Add(this.btnExit);
             this.pnlControls.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlControls.Location = new System.Drawing.Point(0, 0);
@@ -120,16 +121,16 @@
             this.pnlControls.Size = new System.Drawing.Size(567, 53);
             this.pnlControls.TabIndex = 4;
             // 
-            // label1
+            // lblProgramName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 30);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "BatteryTracker";
+            this.lblProgramName.AutoSize = true;
+            this.lblProgramName.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblProgramName.ForeColor = System.Drawing.Color.White;
+            this.lblProgramName.Location = new System.Drawing.Point(12, 9);
+            this.lblProgramName.Name = "lblProgramName";
+            this.lblProgramName.Size = new System.Drawing.Size(180, 30);
+            this.lblProgramName.TabIndex = 6;
+            this.lblProgramName.Text = "BatteryTracker";
             // 
             // btnExit
             // 
@@ -220,6 +221,10 @@
             // 
             this.dragControl1.SelectControl = this.pnlControls;
             // 
+            // dragControl2
+            // 
+            this.dragControl2.SelectControl = this.lblProgramName;
+            // 
             // Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -265,12 +270,13 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblProgramName;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblLogInterval;
         private BatteryTracker.DragControl dragControl1;
+        private BatteryTracker.DragControl dragControl2;
     }
 }
 

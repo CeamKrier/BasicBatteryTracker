@@ -36,6 +36,7 @@
             this.dcEdit = new BatteryTracker.DragControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtInterval = new System.Windows.Forms.TextBox();
+            this.dragControl1 = new BatteryTracker.DragControl();
             this.pnlControls.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -113,6 +114,10 @@
             this.txtInterval.TabIndex = 11;
             this.txtInterval.Text = "Enter interval between 1 to 99";
             // 
+            // dragControl1
+            // 
+            this.dragControl1.SelectControl = this.label2;
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -143,5 +148,6 @@
         private BatteryTracker.DragControl dcEdit;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtInterval;
+        private BatteryTracker.DragControl dragControl1;
     }
 }
