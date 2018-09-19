@@ -3,4 +3,4 @@ title: Basic Battery Tracker
 description: You can download the latest release of the application from there.
 show_downloads: true
 github:
-  zip_url: http://example.com/download.zip
+  zip_url: https://github.com/CeamKrier/CeamKrier/BasicBatteryTracker/raw/master/SimpleCounter/bin/Release/BatteryTracker.exe
