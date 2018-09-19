@@ -6,3 +6,7 @@
 img {
   width: 80px;
 }
+
+.page-header > a:last-child {
+    display: none;
+}
