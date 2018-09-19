@@ -1,7 +1,7 @@
 
 # Features 
 
-![BatteryTracker](img/logo.png)
+![BatteryTracker](assets/img/logo.png)
 
 
 *   Battery usage logging on:
