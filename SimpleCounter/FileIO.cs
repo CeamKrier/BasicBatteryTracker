@@ -23,6 +23,13 @@ namespace SimpleCounter
                     String line = "Drained: " + log.getDrainedBatteryPercent().ToString() + "% Elapsed Time: " + log.getElapsedTime();
                     sw.WriteLine(line);
                 }
+                sw.WriteLine(""); //Empty line
+
+                int totalDrainage = logColl.Count;
+                BatteryLogEvent lastLog = logColl.ElementAt(logColl.Count - 1);
+
+                sw.WriteLine("Drained " + totalDrainage.ToString() + "% in " + lastLog.getElapsedTime());
+                sw.WriteLine("On average, you have used your computer " + AverageDrainage(totalDrainage, lastLog) + " minutes for 1% of your battery.");
                 sw.Close();
                 return true;
             }
@@ -30,6 +37,13 @@ namespace SimpleCounter
             {
                 return false;
             }
+        }
+
+        private static double AverageDrainage(int drainage, BatteryLogEvent lastLog)
+        {
+            String[] time = lastLog.getElapsedTime().Split(':');
+            int elapsedMinutes = Int32.Parse(time[0]) * 60 + Int32.Parse(time[1]);
+            return Convert.ToDouble(elapsedMinutes) / drainage;
         }
     }
     
